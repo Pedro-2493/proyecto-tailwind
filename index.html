@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGDL- Inicio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .ferrocarril::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header class="bg-rose-600 text-white py-5 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+            <img src="img/iconos/icono_header.png" alt="imagen de cabecera"
+                class="h-20 w-30 ">
+            <nav class="hidden md:flex space-x-6">
+                <a href="pages/subsidios.html" class="hover:text-black font-semibold">Subsidios</a>
+                <a href="pages/bibliotecavr.html" class="hover:text-black  font-semibold">Biblioteca virtual</a>
+                <a href="pages/clasesvr.html" class="hover:text-black font-semibold">Clases virtuales</a>
+            </nav>
+            <div class="space-x-2">
+                <a href="pages/login.html" class="bg-rose-200 text-neutral-900 px-4 py-1 rounded-full hover:bg-slate-300 font-semibold">Login</a>
+                <a href="pages/registro.html"
+                    class="bg-rose-200 text-neutral-900 px-4 py-1 rounded-full hover:bg-slate-300 font-semibold">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Presentación -->
+    <section class="text-center py-16 bg-rose-100">
+        <h2 class="text-4xl font-bold mb-4">Bienvenido a Progreso y Gestion Para el desarrollo local.</h2>
+        <p class="text-lg max-w-2xl mx-auto">Explora nuestras oportunidades educativas: becas, biblioteca virtual y
+            clases interactivas.</p>
+    </section>
+
+    <!-- Secciones Destacadas con imagen -->
+    <section class="max-w-6xl mx-auto px-4 py-12 space-y-16">
+
+        <!-- Subsidios -->
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <img src="img/hero/subsidios.webp" class="w-full md:w-1/2 rounded-xl shadow" alt="Subsidios educativos">
+            <div>
+                <h3 class="text-3xl font-bold text-rose-600">Subsidios Educativos</h3>
+                <p class="mt-2 mb-4">Accede a becas y ayudas económicas para seguir estudiando.</p>
+                <a href="pages/subsidios.html" class="text-white bg-rose-600 px-4 py-2 rounded hover:bg-rose-500 font-semibold">Aplicar</a>
+            </div>
+        </div>
+
+        <!-- Biblioteca -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+            <img src="img/hero/bibliotecaVr.jpg" class="w-full md:w-1/2 rounded-xl shadow" alt="Biblioteca virtual">
+            <div>
+                <h3 class="text-3xl font-bold text-rose-600">Biblioteca Virtual</h3>
+                <p class="mt-2 mb-4">Miles de libros y artículos al alcance de un clic.</p>
+                <a href="pages/bibliotecavr.html"
+                    class="text-white bg-rose-600 px-4 py-2 rounded hover:bg-rose-500 font-semibold">Explorar</a>
+            </div>
+        </div>
+
+        <!-- Clases -->
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <img src="img/hero/clasesVr.jpg" class="w-full md:w-1/2 rounded-xl shadow" alt="Clases virtuales">
+            <div>
+                <h3 class="text-3xl font-bold text-rose-600">Clases Virtuales</h3>
+                <p class="mt-2 mb-4">Cursos en línea para mejorar tus habilidades desde casa.</p>
+                <a href="clases.html" class="text-white bg-rose-600 px-4 py-2 rounded hover:bg-rose-500 font-semibold">Inscribirme</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Ferrocarril de Imágenes -->
+    <section class="bg-gray-200 py-10">
+        <h4 class="text-center text-2xl font-bold text-rose-700 mb-6">Galería Estudiantil</h4>
+        <div class="flex overflow-x-auto ferrocarril space-x-4 px-6">
+            <img src="img/galeria1.jpg" class="h-48 rounded-xl shadow-md" alt="">
+            <img src="img/galeria2.jpg" class="h-48 rounded-xl shadow-md" alt="">
+            <img src="img/galeria3.jpg" class="h-48 rounded-xl shadow-md" alt="">
+            <img src="img/galeria4.jpg" class="h-48 rounded-xl shadow-md" alt="">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rose-600 text-white py-6 text-center">
+        <p>&copy; 2025 PGDL. Todos los derechos reservados.</p>
+        <div class="mt-4">
+            <img src="img/logos/redes_facebook.png" alt="Facebook" class="inline-block h-6 w-6 mx-2">
+            <img src="img/logos/redes_twitter.png" alt="Twitter" class="inline-block h-6 w-6 mx-2">
+            <img src="img/logos/redes_instagram.png" alt="Instagram" class="inline-block h-6 w-6 mx-2">
+        </div>
+    </footer>
+
+</body>
+
+</html>

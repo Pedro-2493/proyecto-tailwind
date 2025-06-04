@@ -1,0 +1,67 @@
+<!-- biblioteca.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-5 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+              <img src="img/iconos/icono_header.png" alt="imagen de cabecera"
+                class="h-20 w-30 ">
+            <nav class="hidden md:flex space-x-6">
+                <a href="subsidios.html" class="hover:underline">Subsidios</a>
+                <a href="bibliotecavr.html" class="hover:underline">Biblioteca virtual</a>
+                <a href="clasesvr.html" class="hover:underline">Clases virtuales</a>
+            </nav>
+            <div class="space-x-2">
+                <a href="login.html" class="bg-white text-blue-600 px-4 py-1 rounded-full hover:bg-blue-100">Login</a>
+                <a href="registro.html"
+                    class="bg-yellow-400 text-blue-900 px-4 py-1 rounded-full hover:bg-yellow-300 font-semibold">Registrarse</a>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-6xl mx-auto py-12 px-4 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+            <img src="img/libro1.jpg" alt="Introducción a la Programación" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-bold text-green-700 mb-2">Programación Básica</h2>
+                <p class="mb-4">Curso en línea con libro digital gratuito.</p>
+                <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Leer ahora</button>
+            </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+            <img src="img/libro2.jpg" alt="Fundamentos Matemáticos" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-bold text-green-700 mb-2">Fundamentos Matemáticos</h2>
+                <p class="mb-4">Acceso gratuito a recursos de matemáticas universitarias.</p>
+                <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Acceder</button>
+            </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+            <img src="img/libro3.jpg" alt="Ciencias Sociales" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-bold text-green-700 mb-2">Ciencias Sociales</h2>
+                <p class="mb-4">Artículos y libros sobre la sociedad contemporánea.</p>
+                <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Explorar</button>
+            </div>
+        </div>
+    </main>
+
+  <footer class="bg-blue-600 text-white py-6 text-center">
+    <p>&copy; 2025 PGDL. Todos los derechos reservados.</p>
+    <div class="mt-4">
+        <img src="../img/icons/redes_facebook.png" alt="Facebook" class="inline-block h-6 w-6 mx-2">
+        <img src="../img/icons/redes_twitter.png" alt="Twitter" class="inline-block h-6 w-6 mx-2">
+        <img src="../img/icons/redes_instagram.png" alt="Instagram" class="inline-block h-6 w-6 mx-2">
+        </div>
+</footer>
+</body>
+
+</html>
