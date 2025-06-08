@@ -7,9 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clases Virtuales</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        /* Texto con degradado */
+        .gradient-text {
+            background: linear-gradient(to right, #10b981, #06b6d4);
+            /* verde a celeste */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white p-6 space-y-6">
     <!-- Header -->
     <header
         class="relative overflow-hidden bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 text-white py-6 shadow-lg">
@@ -23,28 +51,32 @@
             </nav>
             <div class="space-x-2">
                 <a href="login.html" type="button"
-                    class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"></button>Log
+                    class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Log
                     in</a>
                 <a href="registro.html" type="button"
-                    class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"></button>Registrarse</a>
+                    class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Registrarse</a>
             </div>
         </div>
     </header>
+
     <!-- Mensaje de bienvenida -->
-    <section class="max-w-4xl mx-auto my-16 px-6 py-10 bg-indigo-200 rounded-xl shadow-md text-center">
-        <h1 class="text-3xl font-bold text-slate-700 mb-4">🎓 Bienvenido a la Plataforma de Clases Virtuales</h1>
-        <p class="text-gray-700 text-lg">Explora nuestros cursos cuidadosamente diseñados para ayudarte a avanzar con
+    <section class="max-w-4xl mx-auto my-16 px-6 py-10 bg-zinc-50 rounded-xl shadow-md text-center">
+        <h1
+            class="text-4xl text-center font-bold text-emerald-900 leading-[3.25rem] mb-6 max-w-max lg:max-w-3xl lg:mx-auto gradient-text fade-in-up">
+            Bienvenido a la Plataforma de Clases Virtuales</h1>
+        <p class="text-black text-lg">Explora nuestros cursos cuidadosamente diseñados para ayudarte a avanzar con
             flexibilidad, apoyo y calidad educativa.</p>
     </section>
 
     <!-- Tarjetas de cursos -->
     <main class="max-w-6xl mx-auto py-12 px-4 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
+
         <!-- Tarjeta 1 - Azul suave -->
-        <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-blue-50 transition-colors duration-300">
+        <a href="#" class="flex flex-col md:flex-row bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden
+             hover:bg-blue-50 transition-transform duration-300 hover:scale-105 ">
             <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                src="img/curso1.jpg" alt="Desarrollo Web Básico">
+                src="#" alt="Desarrollo Web Básico">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-blue-700">Desarrollo Web Básico</h5>
                 <p class="mb-3 font-normal text-gray-700">Curso práctico de 4 semanas con certificación.</p>
@@ -55,9 +87,9 @@
 
         <!-- Tarjeta 2 - Rojo cálido -->
         <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-red-50 transition-colors duration-300">
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-red-50 transition-transform duration-300 hover:scale-105">
             <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                src="img/curso2.jpg" alt="Matemática Universitaria">
+                src="#" alt="Matemática Universitaria">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-red-700">Matemática Universitaria</h5>
                 <p class="mb-3 font-normal text-gray-700">Clases en vivo con tutorías personalizadas.</p>
@@ -69,9 +101,9 @@
 
         <!-- Tarjeta 3 - Amarillo mostaza -->
         <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-yellow-50 transition-colors duration-300">
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-yellow-50 transition-transform duration-300 hover:scale-105">
             <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                src="img/curso3.jpg" alt="Técnicas de Estudio">
+                src="../img/hero/clasesVr/clase3.png" alt="Técnicas de Estudio">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-yellow-700">Técnicas de Estudio</h5>
                 <p class="mb-3 font-normal text-gray-700">Optimiza tu aprendizaje desde casa.</p>
@@ -82,9 +114,9 @@
 
         <!-- Tarjeta 4 - Verde menta -->
         <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-green-50 transition-colors duration-300">
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-green-50 transition-transform duration-300 hover:scale-105">
             <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                src="img/curso4.jpg" alt="Introducción a la Biología">
+                src="#" alt="Introducción a la Biología">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-green-700">Introducción a la Biología</h5>
                 <p class="mb-3 font-normal text-gray-700">Explora los fundamentos de la ciencia de la vida.</p>
@@ -96,7 +128,7 @@
 
         <!-- Tarjeta 5 - Naranja suave -->
         <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-orange-50 transition-colors duration-300">
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-orange-50 transition-transform duration-300 hover:scale-105">
             <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
                 src="img/curso5.jpg" alt="Historia Universal">
             <div class="flex flex-col justify-between p-4 leading-normal">
@@ -109,7 +141,7 @@
 
         <!-- Tarjeta 6 - Indigo -->
         <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-indigo-50 transition-colors duration-300">
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-indigo-50 transition-colors duration-300 hover:scale-105">
             <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
                 src="img/curso6.jpg" alt="Arte y Diseño">
             <div class="flex flex-col justify-between p-4 leading-normal">
@@ -123,7 +155,7 @@
 
         <!-- Tarjeta 7 - Rosa -->
         <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-pink-50 transition-colors duration-300">
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-pink-50 transition-colors duration-300 hover:scale-105"> 
             <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
                 src="img/curso7.jpg" alt="Literatura">
             <div class="flex flex-col justify-between p-4 leading-normal">
@@ -136,79 +168,77 @@
 
         <!-- Tarjeta 8 - Cyan -->
         <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-cyan-50 transition-colors duration-300">
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-cyan-50 transition-colors duration-300 hover:scale-105">
             <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
                 src="img/curso8.jpg" alt="Psicología">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-cyan-700">Psicología</h5>
-                <p class="mb-3 font-normal text-gray-700">Entiende la mente humana y su comportamiento.</p>
+                <p class="mb-3 font-normal text-gray-700">Entiende el comportamiento humano.</p>
                 <button
                     class="self-start px-4 py-2 border-2 border-cyan-600 text-cyan-600 rounded-md font-medium hover:bg-cyan-600 hover:text-white transition">Ver
                     más</button>
             </div>
         </a>
 
-        <!-- Tarjeta 9 - Teal -->
-
+        <!-- Tarjeta 9 - Violet -->
         <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-teal-50 transition-colors duration-300">
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-violet-50 transition-colors duration-300 hover:scale-105">
             <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                src="img/curso9.jpg" alt="Economía">
+                src="img/curso9.jpg" alt="Física Básica">
             <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-teal-700">Economía</h5>
-                <p class="mb-3 font-normal text-gray-700">Finanzas y mercados para entender el mundo.</p>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-violet-700">Física Básica</h5>
+                <p class="mb-3 font-normal text-gray-700">Leyes fundamentales y experimentos.</p>
                 <button
-                    class="self-start px-4 py-2 border-2 border-teal-600 text-teal-600 rounded-md font-medium hover:bg-teal-600 hover:text-white transition">Inscribirse</button>
+                    class="self-start px-4 py-2 border-2 border-violet-600 text-violet-600 rounded-md font-medium hover:bg-violet-600 hover:text-white transition">Inscribirse</button>
             </div>
         </a>
 
-        <!-- Tarjeta 10 - Gray -->
-
-        <a href="#" 
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-50 transition-colors duration-300">
-            <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                src="img/curso10.jpg" alt="Física">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-700">Física</h5>
-                <p class="mb-3 font-normal text-gray-600">Explora las leyes del universo y la materia.</p>
-                <button
-                    class="self-start px-4 py-2 border-2 border-gray-600 text-gray-600 rounded-md font-medium hover:bg-gray-600 hover:text-white transition">Ver
-                    más</button> 
-            </div>
-            </a>
-
-            <!-- Tarjeta 11 - Purple -->
+        <!-- Tarjeta 10 - Amber -->
         <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-purple-50 transition-colors duration-300">
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-amber-50 transition-colors duration-300 hover:scale-105">
             <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                src="img/curso11.jpg" alt="Geografía">
+                src="img/curso10.jpg" alt="Química Orgánica">
             <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-purple-700">Geografía</h5>
-                <p class="mb-3 font-normal text-gray-700">Estudia regiones, climas y mapas del mundo.</p>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-amber-700">Química Orgánica</h5>
+                <p class="mb-3 font-normal text-gray-700">Reacciones y compuestos orgánicos.</p>
                 <button
-                    class="self-start px-4 py-2 border-2 border-purple-600 text-purple-600 rounded-md font-medium hover:bg-purple-600 hover:text-white transition">Inscribirse</button>
-            </div>
-            </a>
-
-            <!-- Tarjeta 12 - Orange -->
-        <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-orange-50 transition-colors duration-300">
-            <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                src="img/curso12.jpg" alt="Idiomas">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-orange-700">Idiomas</h5>
-                <p class="mb-3 font-normal text-gray-700">Aprende inglés, francés y más idiomas.</p>
-                <button
-                    class="self-start px-4 py-2 border-2 border-orange-600 text-orange-600 rounded-md font-medium hover:bg-orange-600 hover:text-white transition">Ver
+                    class="self-start px-4 py-2 border-2 border-amber-600 text-amber-600 rounded-md font-medium hover:bg-amber-600 hover:text-white transition">Ver
                     más</button>
             </div>
-            </a>
+        </a>
+
+        <!-- Tarjeta 11 - Lime -->
+        <a href="#"
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-lime-50 transition-colors duration-300 hover:scale-105">
+            <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                src="img/curso11.jpg" alt="Economía Básica">
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-lime-700">Economía Básica</h5>
+                <p class="mb-3 font-normal text-gray-700">Principios de economía para principiantes.</p>
+                <button
+                    class="self-start px-4 py-2 border-2 border-lime-600 text-lime-600 rounded-md font-medium hover:bg-lime-600 hover:text-white transition">Inscribirse</button>
+            </div>
+        </a>
+
+        <!-- Tarjeta 12 - Teal -->
+        <a href="#"
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-teal-50 transition-colors duration-300 hover:scale-105">
+            <img class="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                src="img/curso12.jpg" alt="Programación en Java">
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-teal-700">Programación en Java</h5>
+                <p class="mb-3 font-normal text-gray-700">Aprende a programar desde cero.</p>
+                <button
+                    class="self-start px-4 py-2 border-2 border-teal-600 text-teal-600 rounded-md font-medium hover:bg-teal-600 hover:text-white transition">Ver
+                    más</button>
+            </div>
+        </a>
 
     </main>
 
     <!-- Mensaje final -->
-    <section class="max-w-4xl mx-auto my-16 px-6 py-10 bg-indigo-200 rounded-xl shadow-md text-center">
-        <h2 class="text-3xl font-bold text-slate-700 mb-4">🌟 Tu camino comienza aquí</h2>
+    <section class="max-w-4xl mx-auto my-16 px-6 py-10 bg-zinc-50 rounded-xl shadow-md text-center">
+        <h2 class="text-3xl font-bold text-black mb-4">Tu camino comienza aquí</h2>
         <p class="text-gray-700 mb-6">No importa desde dónde empieces. Lo importante es que empieces. ¡Nos emociona
             acompañarte en cada clase!</p>
         <a href="registro.html"
@@ -219,11 +249,11 @@
 
     <!-- Footer -->
     <footer class="bg-emerald-600 text-white py-6 text-center">
-        <p>&copy; 2025 PGDL. Todos los derechos reservados.</p>
-        <h3 class="font-semibold ">Contactanos</h3>
-        <p class="text-sm">Email:PGDL@hotmail.com</p>
+        <p class="font-semibold text-xl">&copy; 2025 PGDL. Todos los derechos reservados.</p>
+        <h3 class="font-semibold">Contáctanos</h3>
+        <p class="text-sm">Email: PGDL@hotmail.com</p>
         <p class="text-sm">Teléfono: 310-456-7890</p>
-        <p class="text-sm">irección: Av siempre viva 2724 , Pressboard Estates, Springfield.</p>
+        <p class="text-sm">Dirección: Av Siempre Viva 2724, Pressboard Estates, Springfield.</p>
         <div class="mt-4">
             <img src="../img/logos/redes_facebook.png" alt="Facebook" class="inline-block h-6 w-6 mx-2">
             <img src="../img/logos/redes_twitter.png" alt="Twitter" class="inline-block h-6 w-6 mx-2">

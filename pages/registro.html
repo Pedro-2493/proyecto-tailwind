@@ -7,14 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Animación fade-in-up -->
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        /* Texto con degradado */
+        .gradient-text {
+            background: linear-gradient(to right, #10b981, #06b6d4);
+            /* verde a celeste */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
 </head>
 
 <body class="relative bg-gray-100 min-h-screen">
 
-    
+
 
     <!-- Header -->
-    <header class="relative z-10 overflow-hidden bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 text-white py-6 shadow-lg">
+    <header
+        class="relative z-10 overflow-hidden bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 text-white py-6 shadow-lg">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
             <a href="../index.html">
                 <img src="../img/iconos/icono_header.png" alt="imagen de cabecera" class="h-20 w-30">
@@ -25,8 +53,11 @@
                 <a href="clasesvr.html" class="hover:text-black font-semibold">Clases virtuales</a>
             </nav>
             <div class="space-x-2">
-                <a href="login.html" type="button" class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"></button>Log in</a>
-                <a href="registro.html" type="button" class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"></button>Registrarse</a>
+                <a href="login.html" type="button"
+                    class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"></button>Log
+                    in</a>
+                <a href="registro.html" type="button"
+                    class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"></button>Registrarse</a>
             </div>
         </div>
     </header>
@@ -35,50 +66,75 @@
     <main class="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-12">
 
         <!-- Bloque de bienvenida -->
-        <div class="bg-emerald-100 p-6 rounded-xl shadow-md w-full max-w-md mb-6 text-center">
-            <h1 class="text-3xl font-bold text-emerald-700 mb-2">Bienvenido a PGDL</h1>
-            <p class="text-gray-600">Accede a herramientas educativas, subsidios y más beneficios para tu futuro.</p>
+        <div class="max-w-7xl mx-auto my-12 px-6 py-8 bg-zinc-100 rounded-xl shadow-md text-center">
+            <h1
+                class="text-4xl text-center font-bold text-emerald-900 leading-[3.25rem] mb-6 max-w-max lg:max-w-3xl lg:mx-auto gradient-text fade-in-up">
+                Bienvenido a PGDL</h1>
+            <p class="text-gray-600 font-semibold">Accede a herramientas educativas, subsidios y más beneficios para tu
+                futuro.</p>
         </div>
 
         <!-- Formulario de Registro -->
         <div class="bg-white p-8 rounded-2xl shadow-md w-full max-w-md transition hover:shadow-xl hover:scale-[1.01]">
-            <h2 class="text-2xl font-bold text-center text-emerald-700 mb-6">Crear una cuenta</h2>
+            <h2 class="text-2xl font-bold text-center text-slate-700 mb-6">Crear una cuenta</h2>
             <form action="#" method="POST" class="space-y-4">
                 <div>
                     <label for="name" class="block text-sm font-semibold text-gray-700">Nombre completo</label>
-                    <input type="text" id="name" name="name" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                    <input type="text" id="name" name="name"
+                        class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required>
                 </div>
                 <div>
                     <label for="email" class="block text-sm font-semibold text-gray-700">Correo electrónico</label>
-                    <input type="email" id="email" name="email" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                    <input type="email" id="email" name="email"
+                        class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required>
                 </div>
                 <div>
                     <label for="password" class="block text-sm font-semibold text-gray-700">Contraseña</label>
-                    <input type="password" id="password" name="password" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                    <input type="password" id="password" name="password"
+                        class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required>
                 </div>
                 <div>
                     <label for="confirm" class="block text-sm font-semibold text-gray-700">Confirmar contraseña</label>
-                    <input type="password" id="confirm" name="confirm" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                    <input type="password" id="confirm" name="confirm"
+                        class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required>
                 </div>
 
-                <p class="text-sm text-gray-600 text-center mb-2">Al registrarte, accedes a múltiples beneficios educativos y soporte exclusivo.</p>
+                <p class="text-sm text-gray-600 text-center mb-2">Al registrarte, accedes a múltiples beneficios
+                    educativos y soporte exclusivo.</p>
 
-                <button type="submit" class="flex items-center justify-center gap-2 w-full bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700 transition">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <button type="submit"
+                    class="flex items-center justify-center gap-2 w-full bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700 transition">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                     Registrarse
                 </button>
             </form>
-            <p class="text-center text-sm text-gray-600 mt-4">¿Ya tienes una cuenta? <a href="login.html" class="text-green-600 hover:underline">Inicia sesión</a></p>
+            <p class="text-center text-sm text-black mt-4">¿Ya tienes una cuenta? <a href="login.html"
+                    class="text-green-600 hover:underline">Inicia sesión</a></p>
         </div>
 
-        <!-- Footer reducido -->
-        <footer class="text-center text-xs text-gray-400 mt-10">
-            <p>&copy; 2025 PGDL • Todos los derechos reservados</p>
-        </footer>
 
     </main>
+    <!-- Footer -->
+    <footer class="bg-emerald-600 text-white py-6 text-center mt-10">
+        <p class="font-semibold  text-xl ">&copy; 2025 PGDL. Todos los derechos reservados.</p>
+        <h3 class="font-semibold">Contáctanos</h3>
+        <p class="text-sm">Email: PGDL@hotmail.com</p>
+        <p class="text-sm">Teléfono: 310-456-7890</p>
+        <p class="text-sm">Dirección: Av Siempre Viva 2724, Pressboard Estates, Springfield.</p>
+        <div class="mt-4">
+            <img src="../img/logos/redes_facebook.png" alt="Facebook" class="inline-block h-6 w-6 mx-2">
+            <img src="../img/logos/redes_twitter.png" alt="Twitter" class="inline-block h-6 w-6 mx-2">
+            <img src="../img/logos/redes_instagram.png" alt="Instagram" class="inline-block h-6 w-6 mx-2">
+        </div>
+    </footer>
 </body>
 
-</body>
+
 
 </html>
